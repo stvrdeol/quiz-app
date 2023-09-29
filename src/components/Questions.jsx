@@ -105,11 +105,11 @@ function Questions() {
         <Spinner />
       ) : randomQuestionsArr.length > 0 && !showScore ? (
         <>
-          <h1 className="mb-5 slide-in text-2xl font-sans font-bold">
+          <h1 className="mb-5 slide-in text-2xl font-sans font-bold text-center">
             Get Quizzical: Play and Learn!
           </h1>
           <div
-            className={`bg-[#393E46] rounded-xl p-6 w-10/12 mx-auto max-w-xl enter`}>
+            className={`bg-[#393E46] rounded-xl p-6 w-full mx-auto max-w-xl enter`}>
             <section className="flex justify-between font-bold text-lg">
               <p>
                 Question : <span> {currentQuestion + 1}/10</span>
