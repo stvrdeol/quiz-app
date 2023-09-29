@@ -100,7 +100,7 @@ function Questions() {
   }, [loading, questions]);
 
   return (
-    <div className="min-w-full grid place-items-center overflow-x-hidden">
+    <div className="min-w-full grid place-items-center overflow-hidden">
       {loading ? (
         <Spinner />
       ) : randomQuestionsArr.length > 0 && !showScore ? (
