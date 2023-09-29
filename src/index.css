@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define entrance animation */
+.enter {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/* Apply entrance animation to an element with the "enter" class */
+/* Standard CSS3 keyframes */
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* WebKit (Safari) */
+@-webkit-keyframes slide-in {
+    0% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Firefox */
+@-moz-keyframes slide-in {
+    0% {
+        -moz-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        -moz-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Apply vendor-prefixed animations to the same element */
+.slide-in {
+    animation: slide-in 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+    -webkit-animation: slide-in 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+    -moz-animation: slide-in 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+}
+
+/*  */
+
+.angry-animate {
+    -webkit-animation: flipinx 1s ease 0s 1 normal;
+    -moz-animation: flipinx 1s ease 0s 1 normal;
+    -ms-animation: flipinx 1s ease 0s 1 normal;
+    animation: flipinx 1s ease 0s 1 normal;
+}
+
+@-webkit-keyframes flipinx {
+    0% {
+        opacity: 0;
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        transform: perspective(400px) rotateX(90deg);
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        transform: perspective(400px) rotateX(-10deg);
+    }
+
+    70% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        transform: perspective(400px) rotateX(10deg);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        transform: perspective(400px) rotateX(0deg);
+    }
+}
+
+@keyframes flipinx {
+    0% {
+        opacity: 0;
+        transform: perspective(400px) rotateX(90deg);
+    }
+
+    40% {
+        transform: perspective(400px) rotateX(-10deg);
+    }
+
+    70% {
+        transform: perspective(400px) rotateX(10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: perspective(400px) rotateX(0deg);
+    }
+}
